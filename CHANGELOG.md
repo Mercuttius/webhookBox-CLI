@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 — ainda não publicada
+## 0.1.0 — 2026-10-17
 
 - Preparação Homebrew com pacote, checksum, fórmula e workflow de release em rascunho.
 

@@ -15,8 +15,6 @@ webhookbox --version
 webhookbox start
 ```
 
-A primeira release está em preparação; o download estará disponível quando a release `v0.1.0` for publicada.
-
 O Homebrew instala Node.js 24 e cloudflared como dependências. O comando `webhookbox` fica disponível em qualquer pasta, sem instalar pacotes globais pelo npm. O aplicativo continua em Node.js; a receita usa o runtime do Homebrew mesmo se outro Node estiver no PATH.
 
 Em outro terminal, use `webhookbox events list` ou `webhookbox events watch`. Para receber da internet, encerre o servidor local e execute `webhookbox start --public`.

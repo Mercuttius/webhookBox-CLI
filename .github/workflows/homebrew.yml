@@ -1,0 +1,32 @@
+name: Homebrew installation
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@master
+      - name: Add the published tap
+        run: brew tap Mercuttius/webhookbox https://github.com/Mercuttius/webhookBox.git
+      - name: Trust this formula when supported by Homebrew
+        shell: bash
+        run: |
+          if brew commands | grep -qx trust; then
+            brew trust --formula Mercuttius/webhookbox/webhookbox
+          fi
+      - name: Install the published release
+        run: brew install Mercuttius/webhookbox/webhookbox
+      - name: Test the installed command and SQLite storage
+        run: brew test Mercuttius/webhookbox/webhookbox
+      - name: Confirm the command works outside the source directory
+        working-directory: /tmp
+        run: |
+          webhookbox --version
+          webhookbox --help
+          cloudflared --version
