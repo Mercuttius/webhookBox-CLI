@@ -1,0 +1,44 @@
+{
+  "name": "webhookbox-cli",
+  "version": "0.1.0",
+  "description": "Local-first webhook inbox for your terminal. Capture, inspect and replay HTTP events.",
+  "type": "module",
+  "bin": {
+    "webhookbox": "bin/webhookbox.js"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node bin/webhookbox.js start",
+    "test": "node --test",
+    "check": "node --check bin/webhookbox.js && node --test",
+    "prepack": "npm test",
+    "release:prepare": "node scripts/prepare-homebrew.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "RELEASING.md"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "webhook",
+    "cli",
+    "http",
+    "debug",
+    "local-first"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mercuttius/webhookBox.git"
+  },
+  "homepage": "https://github.com/Mercuttius/webhookBox#readme",
+  "bugs": {
+    "url": "https://github.com/Mercuttius/webhookBox/issues"
+  }
+}
