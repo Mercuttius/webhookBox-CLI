@@ -1,3 +1,5 @@
+logo.PNG
+
 # WebhookBox
 
 Uma caixa de entrada de webhooks para o terminal. Receba requisições HTTP, inspecione headers e body e reenvie eventos para suas aplicações. Sem interface web, conta ou senha. Os dados ficam na sua máquina.
