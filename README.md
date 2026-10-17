@@ -1,4 +1,6 @@
-
+<p align="center">
+  <img src="./logo.PNG" alt="Logo do WebhookBox" width="240">
+</p>
 
 # WebhookBox
 
