@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./logo.PNG" alt="Logo do WebhookBox" width="240">
+  <img src="./logo.PNG" alt="Logo do WebhookBox" width="100%">
 </p>
 
 # WebhookBox
