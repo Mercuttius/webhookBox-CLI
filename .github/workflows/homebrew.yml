@@ -11,7 +11,7 @@ jobs:
         os: [macos-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: Homebrew/actions/setup-homebrew@master
+      - uses: Homebrew/actions/setup-homebrew@4790763c0a3ba4036f72634dc079c4a7dfcd4878
       - name: Add the published tap
         run: brew tap Mercuttius/webhookbox https://github.com/Mercuttius/webhookBox.git
       - name: Trust this formula when supported by Homebrew
